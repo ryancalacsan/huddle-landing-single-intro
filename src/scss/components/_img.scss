@@ -1,5 +1,12 @@
+@use "../abstracts" as *;
+
 .img {
     width: 100%;
     margin-bottom: 60px;
     padding: 0 5px;
+
+    @include breakpoint-up(large) {
+        margin-bottom: 0;
+        align-self: center;
+    }
 }

@@ -1,20 +1,36 @@
 @use "../abstracts" as *;
 
 .content {
+    @include breakpoint-up(large) {
+        text-align: left;
+        margin-left: 59px;
+        max-width: 520px;
+        margin-top: 32px;
+    }
     &__title {
         font-family: $poppins;
         font-weight: $semi-bold;
         font-size: $font-xl;
         line-height: 36px;
         margin-bottom: 16px;
+        @include breakpoint-up(large) {
+            font-size: $font-xxl;
+            line-height: 60px;
+            margin-bottom: 24px;
+        }
     }
 
     &__text {
         line-height: 24px;
         margin-bottom: 24px;
+        @include breakpoint-up(large) {
+            font-size: $font-lg;
+            line-height: 27px;
+        }
     }
 
     &__btn {
+        color: $violet;
         font-family: $poppins;
         font-size: $font-sm;
         line-height: 18px;
@@ -22,5 +38,21 @@
         border: none;
         border-radius: 20px;
         margin-bottom: 64px;
+        box-shadow: 1px 3px 5px 0px hsla(0, 0%, 0%, 26.9%);
+        transition-property: background-color, color;
+        transition: 150ms ease-in-out;
+
+        @include breakpoint-up(large) {
+            font-size: $font-lg;
+            line-height: 27px;
+            padding: 15px 64px;
+            border-radius: 28px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $soft-magenta;
+            cursor: pointer;
+        }
     }
 }

@@ -1,7 +1,17 @@
+@use "../abstracts" as *;
+
 .header {
     text-align: left;
     margin-bottom: 69.8px;
+
+    @include breakpoint-up(large) {
+        margin-bottom: 100px;
+    }
     &__logo {
         width: 120px;
+
+        @include breakpoint-up(large) {
+            width: 200px;
+        }
     }
 }

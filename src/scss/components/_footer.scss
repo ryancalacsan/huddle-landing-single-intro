@@ -7,18 +7,44 @@
         max-width: 104px;
         margin: 0 auto;
 
+        @include breakpoint-up(large) {
+            margin: 0;
+            margin-left: auto;
+            max-width: 152px;
+        }
+
         &-circle {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             border: 1px solid $white;
             border-radius: 50%;
+            transition: border 150ms ease-in-out;
+
+            @include breakpoint-up(large) {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                border: 1px solid $soft-magenta;
+                cursor: pointer;
+
+                .footer__social-icon {
+                    color: $soft-magenta;
+                }
+            }
         }
 
         &-icon {
             font-size: $font-sm;
+            transition: color 150ms ease-in-out;
+
+            @include breakpoint-up(large) {
+                font-size: $font-lg;
+            }
         }
     }
 }

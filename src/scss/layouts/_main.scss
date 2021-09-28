@@ -1,3 +1,22 @@
+@use "../abstracts" as *;
+
 main {
     padding: 32.8px 35px 40px 35px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+        padding: 64px 80px 40px 80px;
+        max-width: 1435px;
+    }
+}
+
+.desktop-container {
+    @include breakpoint-up(large) {
+        // max-width: 1275px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 27px;
+    }
 }
