@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $open;
+    font-weight: $regular;
+    font-size: $font-md;
+    text-align: center;
+    color: $white;
+    background-image: url(../images/bg-mobile.svg);
+    background-color: $violet;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}

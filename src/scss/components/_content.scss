@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.content {
+    &__title {
+        font-family: $poppins;
+        font-weight: $semi-bold;
+        font-size: $font-xl;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        font-family: $poppins;
+        font-size: $font-sm;
+        line-height: 18px;
+        padding: 11px 75.5px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 64px;
+    }
+}

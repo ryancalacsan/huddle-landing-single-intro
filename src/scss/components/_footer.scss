@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+.footer {
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        max-width: 104px;
+        margin: 0 auto;
+
+        &-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 26px;
+            height: 26px;
+            border: 1px solid $white;
+            border-radius: 50%;
+        }
+
+        &-icon {
+            font-size: $font-sm;
+        }
+    }
+}
