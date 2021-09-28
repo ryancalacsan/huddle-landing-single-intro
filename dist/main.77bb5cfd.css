@@ -416,7 +416,7 @@ main {
 }
 
 .img {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 60px;
   padding: 0 5px;
 }
@@ -424,6 +424,8 @@ main {
   .img {
     margin-bottom: 0;
     align-self: center;
+    min-width: 0;
+    flex-basis: 50%;
   }
 }
 
@@ -433,6 +435,7 @@ main {
     margin-left: 59px;
     max-width: 520px;
     margin-top: 32px;
+    flex-basis: 50%;
   }
 }
 .content__title {
@@ -469,8 +472,8 @@ main {
   border-radius: 20px;
   margin-bottom: 64px;
   box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.269);
-  transition-property: background-color, color;
-  transition: 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 @media (min-width: 64em) {
   .content__btn {
